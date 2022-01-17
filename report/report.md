@@ -12,8 +12,6 @@
 
 **CÔNG VIỆC CHUNG**
 
-$\color{ff} \rule{150px}{3px}$
-
 - Tìm hiểu tài liệu
 - Bàn luận hướng giải quyết từng câu hỏi
 - Họp bàn đồ án hằng ngày
@@ -21,40 +19,26 @@ $\color{ff} \rule{150px}{3px}$
 
 **HỌ TÊN**
 
-$\color{deadf} \rule{84px}{3px}$
-
 LÊ ANH VŨ
-
-$\color{deadf} \rule{84px}{3px}$
 
 NGÔ MẬU TRƯỜNG
 
 **MSSV**
 
-$\color{deadf} \rule{57px}{3px}$
-
 19120724
-
-$\color{deadf} \rule{57px}{3px}$
 
 19120699
 
 **CÔNG VIỆC RIÊNG**
-
-$\color{ff} \rule{177px}{3px}$
 
 - Hoàn thành các ý chính câu 1
 - Các hàm chức năng câu 2 (các chức năng trong C2.1.1, C2.1.2.2)
 - Xử lí vùng găng
 - Edit video demo
 
-$\color{ff} \rule{177px}{3px}$
-
 - Kiểm tra, chỉnh sửa câu 1
 - Đảm nhận xây dựng GUI, các chức năng còn lại trong Câu 2.
 - Demo video
-
-$\color{ff} \rule{550px}{3px}$
 
 # Các chức năng và mức độ hoàn thành.
 
@@ -89,7 +73,7 @@ Lợi ích của bộ nhớ ảo:
 
 Cơ chế phân trang như sau. Một địa chỉ logic bao gồm hai phần, phần biểu diễn **vị trí page** và biểu diễn **vị trí phần tử** trong một page. Mọi thôi tin được lưu trong bảng mô tả ánh xạ **page table.** Từ đó có thể suy ra được địa chỉ vật lý. **NOTE**: khác với phân đoạn, mỗi trang trong phân trang có kích thước bằng nhau.
 
-![Figure 1.1 Cơ chế phân trang](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled.png)
+![Figure 1.1 Cơ chế phân trang](image/Untitled.png)
 
 Figure 1.1 Cơ chế phân trang
 
@@ -100,7 +84,7 @@ Trong việc ánh xạ từ **Logical memory** đến **Physical memory**, cần
 - Ở bộ nhớ vật lý được chia thành các **frame,** có kích thước đúng bằng một page trong bộ nhớ ảo.
 - Việc ánh xạ từ bộ nhớ ảo bằng cách so khớp với thông tin trong bảng mô tả **page table. Ví dụ** trong hình biên dưới, page số 0 sẽ nằm ở frame thứ 1, page 1 tương ứng frame 4.
 
-![Figure 1.2 Phương thức ánh xạ.](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%201.png)
+![Figure 1.2 Phương thức ánh xạ.](image/Untitled%201.png)
 
 Figure 1.2 Phương thức ánh xạ.
 
@@ -113,7 +97,7 @@ Figure 1.2 Phương thức ánh xạ.
 
 Nếu kích thước của không gian địa chỉ luận lý là $2^m$, và kích thước của trang là $2^n$  (đơn vị là byte hay word tùy theo kiến trúc máy) thì bảng phân trang sẽ có tổng cộng $2^m / 2^n = 2^{m-n}$  mục (entry)
 
-![Figure 1.3 Địa chỉ ảo.](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%202.png)
+![Figure 1.3 Địa chỉ ảo.](image/Untitled%202.png)
 
 Figure 1.3 Địa chỉ ảo.
 
@@ -121,7 +105,7 @@ Figure 1.3 Địa chỉ ảo.
 
 Ở phần này em khảo sát trên máy tính cá nhân của em. Máy sử dụng kiến trúc x86_64 trên nhân linux.
 
-![Figure 1.4 Thông tin máy tính cá nhân,](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%203.png)
+![Figure 1.4 Thông tin máy tính cá nhân,](image/Untitled%203.png)
 
 Figure 1.4 Thông tin máy tính cá nhân,
 
@@ -129,7 +113,7 @@ Dựa trên các thông tin từ hệ điều hành cung cấp cùng các thông
 
 **Page size:** Em sử dụng lệnh `pagesize` ****để kiểm tra kích thước mỗi page. Theo như kết quả trả về đó là 4096 Byte, đồng nghĩa **frame size** cũng là 4096 Byte
 
-![Figure 1.5 Page size.](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%204.png)
+![Figure 1.5 Page size.](image/Untitled%204.png)
 
 Figure 1.5 Page size.
 
@@ -304,13 +288,13 @@ Hiển thị 4 tab:
     - Sử dụng thư viện `Pillow` để tạo background
     - Lưu 1 file `user.dat` chứa mật khẩu các user, đọc file và so sánh với mật khẩu nhập vào
         - Cấu trúc file `user.dat`:
-            
+          
             ```markdown
             c<mật khẩu child>
             
             p<mật khẩu parent>
             ```
-            
+        
     - Thiết lập sau **1p** khi bật chương trình mà không nhập mật khẩu đúng thì tiến hành tắt máy (bắt buộc trẻ phải nhập mới sử dụng)
 - **Thuật toán:**
     1. Lấy mật khẩu nhập vào
@@ -334,7 +318,7 @@ Hiển thị 4 tab:
     - Sử dụng thư viện `datetime` để so sánh thời gian
     - Dữ liệu đọc từ file khung giờ để so sánh có dạng `List` gồm nhiều `Dictionary`
     - Mỗi Dictionary gồm:
-        
+      
         ```python
         "F": from
         
@@ -408,7 +392,7 @@ Hiển thị 4 tab:
     - Tạo biến điếm `index_false_password` lưu số lần sai mật khẩu. Nếu sau 3 lần nhập mật khẩu không đúng, phải đợi 10p sau mới được phép đăng nhập lại.
     - Lưu thời gian 10 phút sau thời điểm hiện tại vào file, khi chạy chương trình sẽ xét file này để cho biết có chạy chương trình hay không.
     - Cấu trúc của file lưu là thời điểm được phép bật máy:
-        
+      
         `DD-MM hh:mm`
         
 
@@ -421,7 +405,7 @@ Hiển thị 4 tab:
     - Dùng thư viện `pynput` (dùng Key và Listener) để ghi lại các phím đã bấm
     - Dùng `threading` để chạy chức năng ghi lại các phím đã bấm
     - Lưu lại lịch sử dụng vào trong thư mục `history_time`, tên file lưu có dạng `‘DD-MM.txt’`, cấu trúc trong file dạng:
-        
+      
         ```
         <start1>~<end1>
         
@@ -450,7 +434,7 @@ Hiển thị 4 tab:
             - Nếu ngược lại: thời gian kết thúc = thời gian hiện tại + SUM (bời vì trong khoảng nghỉ SUM không đếm ngược, tức là không cần tính cả interrupt vào)
 6. Kiểm tra xem đã hết thời gian Duration hay chơi, nếu đã hết rồi, lưu Interrupt rồi ngủ máy 
 7. Kiểm tra xem đã hết quãng Interrupt hay chưa, nếu chưa thì ’`try`’ ngủ máy (**ở đây phòng trường hợp trẻ  trong khoảng nghỉ bật máy thoát khỏi chế độ ngủ**):
-    
+   
     ```python
     #Nếu Interrupt lớn hơn thời gian hiện tại, tức là vẫn nằm trong thời gian Interrupt
     if Interrupt['I'] > datetime.today().time():
@@ -526,27 +510,27 @@ Hiển thị 4 tab:
 1. Bấm tổ hợp phím `window + R`, hộp thoại Run xuất hiện
 2. Nhập `shell:startup` → `OK/Enter` → Thư mục startup xuất hiện
 
-![Figure 2.1 Nhập `shell:startup`](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%205.png)
+![Figure 2.1 Nhập `shell:startup`](image/Untitled%205.png)
 
 Figure 2.1 Nhập `shell:startup`
 
 1. Trong thư mục startup, nhấn chuột phải → New → shortcut → Hộp thoại tạo shortcut xuất hiện
 
-![Untitled](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%206.png)
+![Untitled](image/Untitled%206.png)
 
 1. Nhập `CMD /k python “<Đường dẫn file Child>` trong mục `Type the location of the item:` 
 
-![Figure 2.2 Gán đường dẫn](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%207.png)
+![Figure 2.2 Gán đường dẫn](image/Untitled%207.png)
 
 Figure 2.2 Gán đường dẫn
 
 1. Nhấn `Next` → Nhập tên mới cho shortcut → Nhấn `Finish`
 
-![Figure 2.3  Đặt tên cho đường dẫn](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%208.png)
+![Figure 2.3  Đặt tên cho đường dẫn](image/Untitled%208.png)
 
 Figure 2.3  Đặt tên cho đường dẫn
 
-![Figure 2.4 Kết quả](%C4%90O%CC%82%CC%80%20A%CC%81N%20CUO%CC%82%CC%81I%20KI%CC%80%20HE%CC%A3%CC%82%20%C4%90IE%CC%82%CC%80U%20HA%CC%80NH%2019_3%2094acd8e88dd34771919de281ae2a2eba/Untitled%209.png)
+![Figure 2.4 Kết quả](image/Untitled%209.png)
 
 Figure 2.4 Kết quả
 
